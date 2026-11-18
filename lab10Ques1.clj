@@ -1,0 +1,42 @@
+;; ===== 1. LIST =====
+(println "=== LIST ===")
+(def my-list '(1 2 3))
+(def list-conj (conj my-list 0))
+(println "Original list:" my-list)
+(println "first:" (first my-list))
+(println "rest:" (rest my-list))
+(println "After conj 0 (new list):" list-conj)
+(println "Original list unchanged:" my-list)
+
+;; ===== 2. VECTOR =====
+(println "\n=== VECTOR ===")
+(def my-vec [10 20 30])
+(def vec-conj (conj my-vec 40))
+(println "Original vector:" my-vec)
+(println "Get index 1:" (get my-vec 1))
+(println "count:" (count my-vec))
+(println "After conj 40 (new vector):" vec-conj)
+(println "Original vector unchanged:" my-vec)
+
+;; ===== 3. MAP =====
+(println "\n=== MAP ===")
+(def my-map {:name "Asha" :age 20})
+(def map-assoc (assoc my-map :city "Delhi"))
+(def map-dissoc (dissoc my-map :age))
+(println "Original map:" my-map)
+(println "get :name:" (get my-map :name))
+(println "After assoc :city (new map):" map-assoc)
+(println "After dissoc :age (new map):" map-dissoc)
+(println "Original map unchanged:" my-map)
+
+;; ===== 4. SET =====
+(println "\n=== SET ===")
+(def my-set #{1 2 3})
+(def set-conj (conj my-set 4))
+(def set-disj (disj my-set 2))
+(println "Original set:" my-set)
+(println "contains? 2:" (contains? my-set 2))
+(println "contains? 9:" (contains? my-set 9))
+(println "After conj 4 (new set):" set-conj)
+(println "After disj 2 (new set):" set-disj)
+(println "Original set unchanged:" my-set)
